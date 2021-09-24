@@ -182,7 +182,7 @@ function cgpa()
      
     if(!isNaN(result))
     {
-        document.getElementById("answer").value="your CGPA is " + result;
+        document.getElementById("answer").value="your CGPA is  " + result + "                               (reset before next calculation)";
     }
 }
         
@@ -207,7 +207,7 @@ function findbmi()
             }
             }
             else{
-            alert("Data you've entered might be incorrect. Please check and try again.")
+            alert("Incorrect data ! Try again.")
             }
         
             }
