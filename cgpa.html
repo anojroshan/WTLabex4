@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bb9893fd41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>mycalculator</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a style="letter-spacing: 8px;" class="navbar-brand" href="index.html">HOME<i class="fas fa-calculator"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+          
+          <li class="nav-item p-1">
+            <a class="btn btn-md btn-dark my-1" aria-current="page" href="cgpa.html">CGPA</a>
+          </li>
+          <li class="nav-item p-1">
+            <a class="btn btn-md btn-dark my-1" aria-current="page" href="bmi.html">BMI</a>
+          </li>
+          <li class="nav-item p-1">
+            <a class="btn btn-md btn-dark my-1" aria-current="page" href="3dshape.html">Area & Volume</a>
+          </li>
+        
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <body style="background-color: rgb(243, 227, 230);">
+      <div style="margin-top: 8px;" class="container-fluid">
+        <h1 style="text-align: center;"><u>CGPA CALCULATOR</u></h1>
+             <h2>Choose semester:</h2>
+                <form>
+          <div class="row">
+            <div class="col-md-12">
+              <table style="width: 100%;">
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>
+                    <label style="border-radius: 10px;" for="textenableradio1">one</label>
+                        <input type="radio" class="form-check-input" id="textenableradio1" name="semester" value="one" onclick="boxenable1()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio2">Two</label>
+                        <input type="radio" class="form-check-input" id="textenableradio2" name="semester" value="two" onclick="boxenable2()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio3">Three</label>
+                    <input type="radio" class="form-check-input" id="textenableradio3" name="semester" value="three" onclick="boxenable3()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio4">four</label>
+                    <input type="radio" class="form-check-input" id="textenableradio4" name="semester" value="three" onclick="boxenable4()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio5">five</label>
+                    <input type="radio" class="form-check-input" id="textenableradio5" name="semester" value="three" onclick="boxenable5()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio6">six</label>
+                                        <input type="radio" class="form-check-input" id="textenableradio6" name="semester" value="three" onclick="boxenable6()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio7">Seven</label>
+                                            <input type="radio" class="form-check-input" id="textenableradio7" name="semester" value="three" onclick="boxenable7()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio8">Eight</label>
+                                            <input type="radio" class="form-check-input" id="textenableradio8" name="semester" value="three" onclick="boxenable8()" >
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h3 style="margin-top: 10px;">Enter GPA here :</h3>
+          
+          <div row>
+            <div class="col-md-12"> 
+                      
+           <div class="entmark" style="width: 600px;">
+              <ul>
+          <li><input type="text" class="form-control" id="s1" placeholder="sem1" ></li>
+          <li><input type="text" class="form-control" id="s2" placeholder="sem2" ></li>
+          <li><input type="text" class="form-control" id="s3" placeholder="sem3" ></li>
+          <li><input type="text" class="form-control" id="s4" placeholder="sem4"></li>
+          <li><input type="text" class="form-control" id="s5" placeholder="sem5"></li>
+          <li><input type="text" class="form-control" id="s6" placeholder="sem6"></li>
+          <li><input type="text" class="form-control" id="s7" placeholder="sem7"></li>
+          <li><input type="text" class="form-control" id="s8" placeholder="sem8"></li>
+          </ul>
+          </div>
+          <button style="margin-left: 900px;" type="button" class="btn btn-lg btn-danger" onclick="cgpa()">Calculate</button>
+          <input class="btn btn-lg btn-danger" type="reset" value="Reset" />
+          </form>
+          <input style="margin-top: 20px;font-size: 25px;" type="text" class="form-control text-danger" id="answer" placeholder="cgpa">
+         
+          </div>
+        
+    </div>
+      </div>
+     
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="myscript.js"></script>
+  </body>
