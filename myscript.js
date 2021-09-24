@@ -190,7 +190,7 @@ function getbox()
 {
 //Intialise textbox value in varible m
 var m=document.getElementById ('meter').value;
-var a=123;
+var a=1111;
 //To check meter number entered is correct or not
 if(m==a)
 {
