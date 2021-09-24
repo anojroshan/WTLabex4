@@ -182,36 +182,140 @@ function cgpa()
      
     if(!isNaN(result))
     {
-        document.getElementById("answer").value="your CGPA is  " + result + "                               (reset before next calculation)";
+        document.getElementById("answer").value="your CGPA is " + result;
     }
 }
         
-function findbmi()
+function getbox()
 {
-    let weight = document.frm.weight.value
-    let height = document.frm.height.value/100
-    if(weight > 0 && height > 0){	
-        let finalBmi = weight/(height*height)
-        document.frm.bmi.value = finalBmi.toFixed(3);
-        if(finalBmi < 18.5){
-        document.frm.stat.value = "Underweight !"
-            }
-        if(finalBmi > 18.5 && finalBmi < 25){
-        document.frm.stat.value = "Normal weight"
-            }
-        if(finalBmi > 25 &&  finalBmi <30){
-        document.frm.stat.value = "Overweight."
-            }
-        if(finalBmi > 30){
-        document.frm.stat.value = "Obese!"
-            }
-            }
-            else{
-            alert("Incorrect data ! Try again.")
-            }
-        
-            }
+//Intialise textbox value in varible m
+var m=document.getElementById ('meter').value;
+var a=123;
+//To check meter number entered is correct or not
+if(m==a)
+{
+document.getElementById ('opt').style.display = 'block';//If meeter number is correct options will appear.
+document.getElementById('go').style.display = 'block';
+}
+else
+{
+document.getElementById ("choose").innerHTML = "Invalid number";
+}
+}
 
+function funno()
+{
+    var p=document.getElementById ('category').value;
+
+    if(p==1)
+    {
+        document.getElementById ('current').style.display ='block';
+        document.getElementById('last').style.display = 'block';
+    }
+    if(p==2)
+    {
+        document.getElementById('current').style.display = 'block';
+        document.getElementById('last').style.display = 'block';
+    }
+
+} 
+
+
+
+
+function finalsub()
+{
+    var p=document.getElementById ('category').value;
+    if(p==1)
+    {
+          netvalue2();
+    }
+
+    if(p==2)
+    {
+        netvalue3();
+    }
+    
+}
+
+function netvalue2()
+{
+var u = document.getElementById ('units').value;
+var s = 35;
+var bill = 0.0;
+if(u>0 && u<50)
+{
+bill = (u*1.35)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=50 && u<150)
+{
+bill = (u*2.15)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=150 && u<300)
+{
+bill = (u*3)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=300 && u<500)
+{
+bill = (u*3.5)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=500 && u<1000)
+{
+bill = (u*6)+s;
+document.frs.bmi.value = bill;
+}
+else
+{
+    document.frs.bmi.value = bill;
+}
+}
+function netvalue3()
+{
+var u = document.getElementById ('units').value;
+var s = 65;
+var bill = 0.0;
+if(u>0 && u<50)
+{
+bill = (u*3)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=50 && u<150)
+{
+bill = (u*4.5)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=150 && u<300)
+{
+bill = (u*5.5)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=300 && u<500)
+{
+bill = (u*6.8)+s;
+document.frs.bmi.value = bill;
+}
+else
+if(u>=500 && u<1000)
+{
+bill = (u*9)+s;
+document.frs.bmi.value = bill;
+}
+else
+{
+    document.frs.bmi.value = "Invalid ";
+}
+}
 
 
 function cuboidsa()
