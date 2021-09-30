@@ -36,8 +36,104 @@
     </div>
   </nav>
   <body style="background-color: rgb(243, 227, 230);">
+    <div class="container-fluid">
+      <h1 style="text-align:center"><u>GPA calculator</u></h1>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="background-color: white;border-radius: 20px;margin-top: 10px;box-shadow:  5px 10px #888888;margin-bottom: 20px;">
+          <form name="gp">
+            <table style="margin-left: 80px;">
+              <tr>
+                <th style="text-align: center;">Subject</th>
+                <th style="text-align: center;">Grade</th>
+                <th style="text-align: center;">Credit</th>
+              </tr>
+              <tr>
+                <td>Subject1 : </td>
+                <td style="text-align: center;"><select name="mark1" id="mark1">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred1" name="cred1" min="1"></td>
+              </tr>
+              <tr>
+                <td>Subject2 : </td>
+                <td style="text-align: center;"><select name="mark2" id="mark2">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred2" name="cred2" min="1"></td>
+              </tr>
+              <tr>
+                <td>Subject3 : </td>
+                <td style="text-align: center;"><select name="mark3" id="mark3">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred3" name="cred3" min="1"></td>
+              </tr>
+              <tr>
+                <td>Subject4 : </td>
+                <td style="text-align: center;"><select name="mark4" id="mark4">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred4" name="cred4" min="1"></td>
+              </tr>
+              <tr>
+                <td>Subject5 : </td>
+                <td style="text-align: center;"><select name="mark5" id="mark5">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred5" name="cred5" min="1"></td>
+              </tr>
+              <tr>
+                <td>Subject6 : </td>
+                <td style="text-align: center;"><select name="mark6" id="mark6">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                  
+                </select></td>
+                <td><input type="number" id="cred6" name="cred6" min="1"></td>
+              </tr>
+              <tr>
+                <td><input type="button" class="btn btn-lg btn-danger" name="sumbutton" value="Calculate" onclick="gpm()" id="sumbutton"></td>
+                <td><input class="btn btn-lg btn-success" type="reset" value="Reset" /></td>
+                <td><input style="font-size: 20px;" type="text" class="text-danger"  placeholder="GPA..." name="summ" id="summ" readonly></td>
+              </tr>
+             
+            </table>
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
       <div style="margin-top: 8px;" class="container-fluid">
-        <h1 style="text-align: center;"><u>CGPA CALCULATOR</u></h1>
+        <h1 style="text-align: center;"><u>CGPA calculator</u></h1>
              <h2>Choose semester:</h2>
                 <form>
           <div class="row">
@@ -108,7 +204,7 @@
           </ul>
           </div>
           <input style type="button" class="btn btn-lg btn-danger" value="Calculate" onclick="cgpa()">
-          <input class="btn btn-lg btn-danger" type="reset" value="Reset" />
+          <input class="btn btn-lg btn-success" type="reset" value="Reset" />
           </form>
           <input style="margin-top: 20px;font-size: 25px;" type="text" class="form-control text-danger" id="answer" placeholder="cgpa">
          
