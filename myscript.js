@@ -243,13 +243,12 @@ function netvalue2()
 var u = document.getElementById ('units').value;
 var s = 35;
 var bill = 0.0;
-if(u>0 && u<50)
+if(u>0 && u<=100)
 {
-bill = (u*1.35)+s;
-document.frs.bmi.value = bill;
+document.frs.bmi.value = "0/-";
 }
 else
-if(u>=50 && u<150)
+if(u>100 && u<150)
 {
 bill = (u*2.15)+s;
 document.frs.bmi.value = bill;
